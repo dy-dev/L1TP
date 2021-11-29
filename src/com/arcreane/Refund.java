@@ -64,23 +64,29 @@ public class Refund {
         float amountToReturn = totalAmount - price;
         System.out.println("I have to return " + amountToReturn+"$");
 
-        int[] bills = {500, 200, 100, 50, 20, 10, 5};
+        float[] bills = {500, 200, 100, 50, 20, 10, 5};
         System.out.println("Giving back ");
-        for (int bill : bills) {
-            int nbBill = (int) (amountToReturn / bill);
-            if (nbBill != 0)
-                System.out.println(nbBill + " of " + bill +"$ bills");
-            amountToReturn -= nbBill*bill;
-        }
+        amountToReturn = getAmountToReturn(amountToReturn, bills, 1 , "bills");
 
         float[] coins = {2.f, 1.f, 0.5f, 0.2f, 0.1f, 0.05f, 0.01f};
-        for (float coin: coins) {
-            int nbCoin = (int) ((amountToReturn*100) / (coin*100));
-            if (nbCoin != 0)
-                System.out.println(nbCoin + " of " + coin +"$ coins");
-            amountToReturn -= nbCoin*coin;
-        }
+        amountToReturn = getAmountToReturn(amountToReturn, coins, 100 , "coins");
+//        for (float coin: coins) {
+//            int nbCoin = (int) ((amountToReturn*100) / (coin*100));
+//            if (nbCoin != 0)
+//                System.out.println(nbCoin + " of " + coin +"$ coins");
+//            amountToReturn -= nbCoin*coin;
+//        }
 
         System.out.println("The amount to return is : " + amountToReturn);
+    }
+
+    private static float getAmountToReturn(float amountToReturn, float[] changes, float factor, String type) {
+        for (float change : changes) {
+            int nbChange = (int) ((amountToReturn*factor) / (change*factor));
+            if (nbChange != 0)
+                System.out.println(nbChange + " of " + change +"$ " + type);
+            amountToReturn -= nbChange*change;
+        }
+        return amountToReturn;
     }
 }
