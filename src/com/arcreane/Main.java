@@ -11,7 +11,8 @@ public class Main {
         //float price = Refund.calculateDynamicRefund();
        // float price = 109.58f;
         //Refund.pay(price);
-    Loan.takeLoan();
+    //Loan.takeLoan();
+        PaidAccount.calculateInvestment();
 
     }
 
