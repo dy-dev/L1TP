@@ -23,6 +23,12 @@ public class Main {
                 "\nPlease give them in descending order");
         for (int i = 0; i < nbRefunds; i++) {
             refunds[i] = scanner.nextFloat();
+            if (i > 0 && refunds[i]> refunds[i-1]) {
+                System.out.println("I said it was to be in descending order only!!! (asshole)");
+                scanner.nextLine();
+                System.out.println("Restart from the beginning");
+                i = -1;
+            }
         }
 
         calculateRefunds(price, refunds);
