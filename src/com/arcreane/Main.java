@@ -15,8 +15,8 @@ public class Main {
         // PaidAccount.calculateInvestment();
 //        Tierce.winningOdds();
         //Calculs.playGame();
-        Palindrome.play();
-
+//        Palindrome.play();
+        MineSweep.play();
     }
 
 
