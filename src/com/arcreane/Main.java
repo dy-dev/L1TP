@@ -12,8 +12,8 @@ public class Main {
        // float price = 109.58f;
         //Refund.pay(price);
     //Loan.takeLoan();
-        PaidAccount.calculateInvestment();
-
+       // PaidAccount.calculateInvestment();
+        Tierce.winningOdds();
     }
 
 }
