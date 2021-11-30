@@ -14,7 +14,9 @@ public class Main {
         //Loan.takeLoan();
         // PaidAccount.calculateInvestment();
 //        Tierce.winningOdds();
-        Calculs.playGame();
+        //Calculs.playGame();
+        Palindrome.play();
+
     }
 
 
