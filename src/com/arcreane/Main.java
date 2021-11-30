@@ -9,11 +9,13 @@ public class Main {
     public static void main(String[] args) {
         //Refund.calculateHardRefund();
         //float price = Refund.calculateDynamicRefund();
-       // float price = 109.58f;
+        // float price = 109.58f;
         //Refund.pay(price);
-    //Loan.takeLoan();
-       // PaidAccount.calculateInvestment();
-        Tierce.winningOdds();
+        //Loan.takeLoan();
+        // PaidAccount.calculateInvestment();
+//        Tierce.winningOdds();
+        Calculs.playGame();
     }
+
 
 }
